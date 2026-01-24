@@ -92,7 +92,12 @@ export class SolanaBridge {
     try {
       const tokenAccount = await getAssociatedTokenAddress(tokenMint, walletAddress);
       const account = await getAccount(this.connection, tokenAccount);
-      return Number(account.amount) / Math.pow(10, 6); // USDC has 6 decimals
+      
+      // Get the mint info to determine the correct decimals
+      const mintInfo = await getMint(this.connection, tokenMint);
+      const decimals = mintInfo.decimals;
+      
+      return Number(account.amount) / Math.pow(10, decimals);
     } catch (error) {
       console.log('Token account not found or error getting balance:', error);
       return 0;
@@ -254,7 +259,7 @@ export class SolanaBridge {
       if (decimals === undefined) {
         try {
           const mintInfo = await getMint(this.connection, mint, undefined, tokenProgram);
-        decimals = mintInfo.decimals;
+          decimals = mintInfo.decimals;
         } catch {
           // Proceed without mint metadata if fetch fails
         }
@@ -333,8 +338,8 @@ export class SolanaBridge {
     }
 
     try {
-    const balance = BigInt(account.amount.toString());
-    if (balance < amountRequired) {
+      const balance = BigInt(account.amount.toString());
+      if (balance < amountRequired) {
         // Continue even if balance is low to surface on-chain error
       }
     } catch {

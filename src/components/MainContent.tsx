@@ -209,7 +209,7 @@ export const MainContent: React.FC = () => {
     return () => {
       cancelled = true;
     };
-  }, [appendLog, baseClient, config.base.bridge, publicKey]);
+  }, [baseClient, config.base.bridge, publicKey]);
 
   const runWithLock = useCallback(async (action: () => Promise<void>) => {
     setIsLocked(true);
