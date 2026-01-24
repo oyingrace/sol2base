@@ -23,24 +23,24 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({
         success: true,
         transactionHash: 'mock_tx_hash_' + Date.now(),
-        amount: 1,
+        amount: 0.00125,
         network: 'solana-devnet',
-        token: 'USDC',
+        token: 'SOL',
         explorerUrl: `https://explorer.solana.com/tx/mock_tx_hash_${Date.now()}?cluster=devnet`,
-        note: 'Mock faucet - CDP not configured. Add your CDP credentials to .env.local'
+        note: 'Mock SOL faucet - CDP not configured. Add your CDP credentials to .env.local'
       });
     }
 
-    // Use real CDP faucet
-    console.log('Using real CDP faucet...');
-    const result = await cdpFaucet.requestUsdc(address);
+    // Use real CDP faucet for SOL
+    console.log('Using real CDP SOL faucet...');
+    const result = await cdpFaucet.requestSol(address);
 
     return NextResponse.json({
       success: true,
       transactionHash: result.transactionHash,
       amount: result.amount,
       network: 'solana-devnet',
-      token: 'USDC',
+      token: 'SOL',
       explorerUrl: `https://explorer.solana.com/tx/${result.transactionHash}?cluster=devnet`
     });
 
