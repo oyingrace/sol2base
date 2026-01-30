@@ -36,3 +36,4 @@ export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
   );
 
   return (
+    <ConnectionProvider endpoint={endpoint}>
