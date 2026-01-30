@@ -22,3 +22,4 @@ const WalletModalProviderDynamic = dynamic(
     ModalProvider.displayName = "WalletModalProviderDynamic";
     return ModalProvider;
   },
+  { ssr: false }
