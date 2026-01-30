@@ -11,3 +11,4 @@ import {
 import { useNetwork } from "../contexts/NetworkContext";
 
 const WalletModalProviderDynamic = dynamic(
+  async () => {
