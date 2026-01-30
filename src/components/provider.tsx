@@ -29,3 +29,4 @@ export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const { config } = useNetwork();
+  const endpoint = config.solana.rpcUrl;
