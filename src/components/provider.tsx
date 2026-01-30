@@ -20,3 +20,4 @@ const WalletModalProviderDynamic = dynamic(
       <WalletModalProvider>{children}</WalletModalProvider>
     );
     ModalProvider.displayName = "WalletModalProviderDynamic";
+    return ModalProvider;
