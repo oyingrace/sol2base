@@ -6,3 +6,4 @@ import dynamic from "next/dynamic";
 import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react";
 import {
   PhantomWalletAdapter,
+  SolflareWalletAdapter,
