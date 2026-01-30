@@ -23,3 +23,4 @@ const WalletModalProviderDynamic = dynamic(
     return ModalProvider;
   },
   { ssr: false }
+);
