@@ -35,3 +35,4 @@ export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
     []
   );
 
+  return (
