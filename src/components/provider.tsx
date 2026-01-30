@@ -28,3 +28,4 @@ const WalletModalProviderDynamic = dynamic(
 export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
   children,
 }) => {
+  const { config } = useNetwork();
