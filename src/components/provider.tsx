@@ -33,3 +33,4 @@ export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
   const wallets = useMemo(
     () => [new PhantomWalletAdapter(), new SolflareWalletAdapter()],
     []
+  );
