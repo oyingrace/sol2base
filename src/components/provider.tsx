@@ -39,3 +39,4 @@ export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
     <ConnectionProvider endpoint={endpoint}>
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProviderDynamic>{children}</WalletModalProviderDynamic>
+      </WalletProvider>
