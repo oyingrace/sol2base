@@ -24,3 +24,4 @@ const WalletModalProviderDynamic = dynamic(
   },
   { ssr: false }
 );
+
