@@ -31,3 +31,4 @@ export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
   const { config } = useNetwork();
   const endpoint = config.solana.rpcUrl;
   const wallets = useMemo(
+    () => [new PhantomWalletAdapter(), new SolflareWalletAdapter()],
