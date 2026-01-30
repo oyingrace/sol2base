@@ -34,3 +34,4 @@ export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
     () => [new PhantomWalletAdapter(), new SolflareWalletAdapter()],
     []
   );
+
