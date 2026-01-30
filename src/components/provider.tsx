@@ -16,3 +16,4 @@ const WalletModalProviderDynamic = dynamic(
       "@solana/wallet-adapter-react-ui"
     );
     await import("@solana/wallet-adapter-react-ui/styles.css");
+    const ModalProvider: FC<{ children: ReactNode }> = ({ children }) => (
