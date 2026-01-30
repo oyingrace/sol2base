@@ -7,3 +7,4 @@ import { ConnectionProvider, WalletProvider } from "@solana/wallet-adapter-react
 import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
+} from "@solana/wallet-adapter-wallets";
