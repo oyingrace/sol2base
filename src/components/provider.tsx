@@ -41,3 +41,5 @@ export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
         <WalletModalProviderDynamic>{children}</WalletModalProviderDynamic>
       </WalletProvider>
     </ConnectionProvider>
+  );
+};
