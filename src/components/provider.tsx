@@ -25,3 +25,4 @@ const WalletModalProviderDynamic = dynamic(
   { ssr: false }
 );
 
+export const SolanaWalletProvider: FC<{ children: ReactNode }> = ({
