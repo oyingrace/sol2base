@@ -14,3 +14,4 @@ const WalletModalProviderDynamic = dynamic(
   async () => {
     const { WalletModalProvider } = await import(
       "@solana/wallet-adapter-react-ui"
+    );
