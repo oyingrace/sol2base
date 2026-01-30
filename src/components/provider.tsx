@@ -19,3 +19,4 @@ const WalletModalProviderDynamic = dynamic(
     const ModalProvider: FC<{ children: ReactNode }> = ({ children }) => (
       <WalletModalProvider>{children}</WalletModalProvider>
     );
+    ModalProvider.displayName = "WalletModalProviderDynamic";
